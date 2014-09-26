@@ -10,11 +10,7 @@ public class LevelOrderTraversalTest {
 
 	@Test
 	//test 1
-	public void emptyTreeTest() {
-//		fail("Not yet implemented");
-		//FrequencyBag fb= new FrequencyBag();
-		//FrequencyBag fb= mock(FrequencyBag.class);
-		
+	public void emptyTreeTest() {		
 		TreeTraversal tr = new TreeTraversal();
 		TreeNode root=null;//= new TreeNode(1);
 		
@@ -27,10 +23,11 @@ public class LevelOrderTraversalTest {
 	public void onlyRootTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
-		TreeNode root= new TreeNode(1);
+		TreeNode root= mock(TreeNode.class);
 		
 		List<List<Integer>> result = tr.levelOrderTraversal(root);
 		assertEquals(result.size(),1);
+		
 	}
 	
 	@Test
@@ -57,17 +54,20 @@ public class LevelOrderTraversalTest {
 		//level 1
 		List<Integer> correctLevel1 = new ArrayList<Integer>();
 		correctLevel1.add(1);
+		assertEquals(result.get(0).size(),1);
 		assertArrayEquals(result.get(0).toArray(),correctLevel1.toArray());
 		
 		//level 2
 		List<Integer> correctLevel2 = new ArrayList<Integer>();
 		correctLevel2.add(2);			correctLevel2.add(3);
+		assertEquals(result.get(1).size(),2);
 		assertArrayEquals(result.get(1).toArray(),correctLevel2.toArray());
 		
 		//level 3
 		List<Integer> correctLevel3 = new ArrayList<Integer>();
 		correctLevel3.add(4);			correctLevel3.add(5);
 		correctLevel3.add(6);			correctLevel3.add(7);
+		assertEquals(result.get(2).size(),4);
 		assertArrayEquals(result.get(2).toArray(),correctLevel3.toArray());
 	}
 	

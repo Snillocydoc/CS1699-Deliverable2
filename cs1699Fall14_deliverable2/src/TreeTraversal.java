@@ -14,14 +14,16 @@ import java.util.Stack;
 public class TreeTraversal {
 	List<List<Integer>> result1 = null;
 	List<Integer> result2=null;
-	ArrayList<Character> leftResult=null;
-    ArrayList<Character> rightResult=null;
+	ArrayList<String> leftResult=null;
+    ArrayList<String> rightResult=null;
+	//String leftResult="";
+    //String rightResult="";
 	
 	public TreeTraversal(){//constructor
 		result1 = new ArrayList<List<Integer>>();
 		result2= new ArrayList<Integer>();
-		leftResult=new ArrayList<Character>();
-	    rightResult=new ArrayList<Character>();
+		leftResult=new ArrayList<String>();
+	    rightResult=new ArrayList<String>();
 	}
 	
 	public void levelOrder(TreeNode root, int level){
@@ -133,24 +135,17 @@ public class TreeTraversal {
 
 	
         
-    public boolean compareLeftRightResult(ArrayList<Character> leftResult,ArrayList<Character> rightResult){
-        if(leftResult.size()!=rightResult.size())
-            return false;
-        
-        for(int i=0; i< leftResult.size(); i++){
-            if(!leftResult.get(i).equals(rightResult.get(i)))
-                return false;
-        }
-        
-        return true;
+    public boolean compareLeftRightResult(ArrayList<String> leftResult,ArrayList<String> rightResult,ListOperations lo){
+//    	ListOperations lo= new ListOperations();
+    	return lo.check2StringListEqual(leftResult, rightResult);
     }
     
     public void rootLeftRight(TreeNode root){
         if(root==null){
-            leftResult.add('n');
+            leftResult.add("n");
             return;
         }else
-            leftResult.add((char)root.val);
+            leftResult.add(Integer.toString(root.val));
         
         rootLeftRight(root.left);
         rootLeftRight(root.right);
@@ -158,23 +153,23 @@ public class TreeTraversal {
     
     public void rootRightLeft(TreeNode root){
         if(root==null){
-            rightResult.add('n');
+            rightResult.add("n");
             return;
         }else
-            rightResult.add((char)root.val);
+            rightResult.add(Integer.toString(root.val));
         
         rootRightLeft(root.right);
         rootRightLeft(root.left);
     }
     
-    public boolean isSymmetric(TreeNode root) {
+    public boolean isSymmetric(TreeNode root,ListOperations lo) {
         if(root==null)
             return true;
         
         rootLeftRight(root.left);
         rootRightLeft(root.right);
         
-        return compareLeftRightResult(leftResult,rightResult);
+        return compareLeftRightResult(leftResult,rightResult,lo);
     }
 
     public void flatten(TreeNode root) {

@@ -5,7 +5,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({
-	t1.class
+	LevelOrderTraversalTest.class, isSymmetricTest.class
 })
 public class AllTests {
 	
