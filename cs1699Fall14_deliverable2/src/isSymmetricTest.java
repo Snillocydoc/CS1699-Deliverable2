@@ -22,7 +22,6 @@ public class isSymmetricTest {
 	@Test
 	//test 2
 	public void completeThreeLevelTreeTest() {
-		ListOperations lo= new ListOperations();
 		ListOperations lo2=mock(ListOperations.class);
 		
 		TreeTraversal tr = new TreeTraversal();

@@ -10,7 +10,7 @@ public class LevelOrderTraversalTest {
 
 	@Test
 	//test 1
-	public void emptyTreeTest() {		
+	public void emptyTreeTest() {
 		TreeTraversal tr = new TreeTraversal();
 		TreeNode root=null;//= new TreeNode(1);
 		
@@ -145,5 +145,36 @@ public class LevelOrderTraversalTest {
 		List<Integer> correctLevel4 = new ArrayList<Integer>();
 		correctLevel4.add(4);
 		assertArrayEquals(result.get(3).toArray(),correctLevel4.toArray());
+	}
+	
+	@Test
+	//test 6
+	public void bigTreeTest() {
+//		ListOperations lo= new ListOperations();
+		TreeTraversal tr = new TreeTraversal();
+		int treeSize=1000;
+		TreeNode r1= new TreeNode(0);
+		TreeNode root1=r1;
+		for(int i=1; i<treeSize; i++){
+			r1.left= new TreeNode(i);
+			r1=r1.left;
+		}
+		List<List<Integer>> result1=tr.levelOrderTraversal(root1);
+		assertEquals(result1.size(),treeSize);
+		for(int i=0;i<treeSize; i++){
+			assertEquals(result1.get(i).size(),1);
+		}
+		
+		TreeNode r2= new TreeNode(0);
+		TreeNode root2=r2;
+		for(int i=1; i<treeSize; i++){
+			r2.right= new TreeNode(i);
+			r2=r2.right;
+		}		
+		List<List<Integer>> result2=tr.levelOrderTraversal(root2);
+		assertEquals(result2.size(),treeSize);
+		for(int i=0;i<treeSize; i++){
+			assertEquals(result2.get(i).size(),1);
+		}
 	}
 }

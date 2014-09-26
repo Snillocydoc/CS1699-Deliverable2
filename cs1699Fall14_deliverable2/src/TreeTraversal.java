@@ -191,5 +191,6 @@ public class TreeTraversal {
         p.right=root.right;
         root.right=root.left;
         root.left=null;
+        
     }
 }
