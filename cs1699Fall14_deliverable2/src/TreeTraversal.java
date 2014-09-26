@@ -6,10 +6,10 @@ import java.util.Stack;
 //1. inorder traversal of binary tree [Cody]
 //2. preorder traversal of binary tree [Cody]
 //3. postorder traversal of binary tree [Cody]
-//4. levelorder traversal of binary tree 
+//4. levelorder traversal of binary tree [Duncan]
 //5. check if two binary trees are the same [Cody]
-//6. check if two binary trees are symmetric
-//7. flatten a binary tree to a linked list
+//6. check if two binary trees are symmetric [Duncan]
+//7. flatten a binary tree to a linked list [Duncan]
 
 public class TreeTraversal {
 	List<List<Integer>> result1 = null;
