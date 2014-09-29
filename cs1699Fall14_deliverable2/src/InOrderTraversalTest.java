@@ -51,7 +51,7 @@ public class InOrderTraversalTest {
 		
 		//check that nodes are in order
 		List<Integer> check = new ArrayList<Integer>();
-		check.add(1);check.add(2);check.add(3);check.add(4);check.add(5);check.add(6);check.add(7);
+		check.add(4);check.add(2);check.add(5);check.add(1);check.add(6);check.add(3);check.add(7);
 		assertArrayEquals(result.toArray(),check.toArray());
 		
 		
@@ -74,7 +74,7 @@ public class InOrderTraversalTest {
 		
 		//check that nodes are in order
 		List<Integer> check = new ArrayList<Integer>();
-		check.add(1);check.add(2);check.add(3);check.add(4);
+		check.add(4);check.add(3);check.add(2);check.add(1);
 		assertArrayEquals(result.toArray(),check.toArray());
 		
 		
