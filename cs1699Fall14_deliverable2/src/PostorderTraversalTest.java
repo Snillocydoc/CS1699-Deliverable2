@@ -10,7 +10,8 @@ import org.junit.Test;
 
 public class PostorderTraversalTest {
 	@Test
-	//test 1
+	//This test ensures that when postorderTraversal is called on an empty tree (a null tree), 
+	//it returns a list of size zero.
 	public void emptyTreeTest() {		
 		TreeTraversal tr = new TreeTraversal();
 		TreeNode root=null;//= new TreeNode(1);
@@ -19,7 +20,8 @@ public class PostorderTraversalTest {
 		assertEquals(result.size(),0);
 	}
 	@Test
-	//test 2
+	//This test ensure that when postorderTraversal is called on a single node tree,
+	//it returns a list of size one.
 	public void onlyRootTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
@@ -30,7 +32,8 @@ public class PostorderTraversalTest {
 		
 	}
 	@Test
-	//test 3
+	//This test checks the postorderTraversal algorithm on a seven node tree.  The test checks for the correct
+	//implementation of the following: Visit the left subtree, visit the right subtree, then visit the root
 	public void completeSevenNodeTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
@@ -57,7 +60,9 @@ public class PostorderTraversalTest {
 		
 	}
 	@Test
-	//test 4
+	//This test specifically ensures that the preorderTraversal visits the left subtree,
+	//then the current node if there is no right subtree,
+	//which is an important aspect of the Pre-order Traversal algorithm
 	public void leftInBalanceFourLevelTreeTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
@@ -80,7 +85,10 @@ public class PostorderTraversalTest {
 		
 	}
 	@Test
-	//test 5
+	//This test specifically ensures that the postorderTraversal 
+	//visits the right subtree if there is no left subtree
+	//then the current node,
+	//which is an important aspect of the Post-order Traversal algorithm
 	public void rightInBalanceFourLevelTreeTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
