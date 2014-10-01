@@ -163,25 +163,4 @@ public class isSymmetricTest {
 		assertFalse(tr.isSymmetric(root2,lo));
 	}
 	
-/*	@Test
-	//test 7
-	public void bigTreeTest() {
-		TreeTraversal tr = new TreeTraversal();
-		int treeSize=1000;
-		TreeNode r1= new TreeNode(0);
-		TreeNode root1=r1;
-		for(int i=1; i<treeSize; i++){
-			r1.left= new TreeNode(i);
-			r1=r1.left;
-		}
-		assertFalse(tr.isSymmetric(root1));
-		
-		TreeNode r2= new TreeNode(0);
-		TreeNode root2=r2;
-		for(int i=1; i<treeSize; i++){
-			r2.right= new TreeNode(i);
-			r2=r2.right;
-		}		
-		assertFalse(tr.isSymmetric(root2));
-	}*/
 }
