@@ -10,6 +10,8 @@ public class IsSameTreeTest {
 	
 	@Test
 	//test 1
+	//this test tests the return value of 2 empty trees
+	//the return value should be true
 	public void emptyTreeTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
@@ -22,6 +24,8 @@ public class IsSameTreeTest {
 
 	@Test
 	//test 2
+	//this test tests the return value of 2 root only trees
+		//the return value should be true
 	public void onlyRootTest() {
 		TreeTraversal tr = new TreeTraversal();
 		TreeNode root1=new TreeNode(1);
@@ -32,6 +36,8 @@ public class IsSameTreeTest {
 
 	@Test
 	//test 3
+	//this test tests the return value of 2 identical 3-level complete binary trees
+	//the return value should be true
 	public void completeThreeLevelTreeTest() {
 	
 		
@@ -63,6 +69,8 @@ public class IsSameTreeTest {
 	}
 	@Test
 	//test 4
+	//this test tests the return value of 2 non-identical 3-level complete binary trees
+	//the return value should be false
 	public void completeThreeLevelTreeTestDifferent() {
 	
 		

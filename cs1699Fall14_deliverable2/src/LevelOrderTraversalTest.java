@@ -10,6 +10,8 @@ public class LevelOrderTraversalTest {
 
 	@Test
 	//test 1
+	//this test tests the return result of an empty tree;
+	//the correct result size should be 0
 	public void emptyTreeTest() {
 		TreeTraversal tr = new TreeTraversal();
 		TreeNode root=null;//= new TreeNode(1);
@@ -20,6 +22,8 @@ public class LevelOrderTraversalTest {
 
 	@Test
 	//test 2
+	//this test tests the return result of a tree with only a root node
+	//the return result size should be 1
 	public void onlyRootTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
@@ -32,6 +36,8 @@ public class LevelOrderTraversalTest {
 	
 	@Test
 	//test 3
+	//this tests tests the return result size of a 3 level complete binary tree
+	//the return size of each each level should be 1,2,4
 	public void completeThreeLevelTreeTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
@@ -73,6 +79,8 @@ public class LevelOrderTraversalTest {
 	
 	@Test
 	//test 4
+	//this test tests the return result size of a 4 level left node only binary tree
+	//the return result size of each level should be 1,1,1,1
 	public void leftInBalanceFourLevelTreeTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
@@ -111,6 +119,8 @@ public class LevelOrderTraversalTest {
 	
 	@Test
 	//test 5
+	//this test tests the return result size of a 4 level right node only binary tree
+		//the return result size of each level should be 1,1,1,1
 	public void rightInBalanceFourLevelTreeTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
@@ -149,6 +159,8 @@ public class LevelOrderTraversalTest {
 	
 	@Test
 	//test 6
+	//this test tests the return result size of a 1000 level left/right node only binary tree
+	//the return result size of each level (1000 levels) should be 1
 	public void bigTreeTest() {
 //		ListOperations lo= new ListOperations();
 		TreeTraversal tr = new TreeTraversal();

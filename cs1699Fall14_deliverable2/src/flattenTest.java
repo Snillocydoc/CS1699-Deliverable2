@@ -10,6 +10,8 @@ public class flattenTest {
 
 	@Test
 	//test 1
+	//this test tests the return result of an empty tree
+	//the result linked list should be an empty linkedlist
 	public void emptyTreeTest() {
 		TreeTraversal tr = new TreeTraversal();
 		TreeNode root=null;
@@ -17,11 +19,11 @@ public class flattenTest {
 		tr.flatten(root);
 		assertEquals(root,null);
 	}
-	
-	
 
 	@Test
 	//test 2
+	//this test tests the return result of a complete 3 level binary tree
+	//the result linked list should be with values 1->2->3->4->5->6->
 	public void completeThreeLevelTreeTest() {		
 		TreeTraversal tr = new TreeTraversal();
 		TreeNode root= new TreeNode(1);
@@ -44,7 +46,9 @@ public class flattenTest {
 	}
 	
 	@Test
-	//test 2
+	//test 3
+	//this test tests the return result of an incomplete 3 level binary tree
+	//the result linked list should be with values 1->2->3->4
 	public void inCompleteThreeLevelTreeTest() {		
 		TreeTraversal tr = new TreeTraversal();
 		TreeNode root= new TreeNode(1);
@@ -65,7 +69,9 @@ public class flattenTest {
 	}
 	
 	@Test
-	//test 6
+	//test 4
+	//this test tests the return result of a left/right node only 1000 level binary tree
+	//the result linked list should be with values 1->2->3->4->...->1000
 	public void bigLeftRightTreeTest() {
 		TreeTraversal tr = new TreeTraversal();
 		int treeSize=1000;

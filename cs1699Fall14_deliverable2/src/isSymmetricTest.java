@@ -10,6 +10,8 @@ public class isSymmetricTest {
 
 	@Test
 	//test 1
+	//this test tests the return result of an empty tree
+	//the return result should be true
 	public void emptyTreeTest() {
 		ListOperations lo= new ListOperations();
 		TreeTraversal tr = new TreeTraversal();
@@ -21,7 +23,10 @@ public class isSymmetricTest {
 
 	@Test
 	//test 2
-	public void completeThreeLevelTreeTest() {
+	//this test tests the return result of a symmetric 3 level complete binary tree.
+	//stub is used the replace the return value of check2StringListEqual function in ListOperations
+	//the return result should be true
+	public void completeThreeLevelTreeTestUsingStub1() {
 		ListOperations lo2=mock(ListOperations.class);
 		
 		TreeTraversal tr = new TreeTraversal();
@@ -42,7 +47,10 @@ public class isSymmetricTest {
 
 	@Test
 	//test 3
-	public void completeThreeLevelTreeTestUsingStub() {		
+	//this test tests the return result of a symmetric 3 level complete binary tree.
+		//stub is used the replace the return value of check2StringListEqual function in ListOperations
+		//the return result should be true
+	public void completeThreeLevelTreeTestUsingStub2() {		
 		TreeTraversal tr = new TreeTraversal();//mock(TreeTraversal.class);
 		ListOperations lo=mock(ListOperations.class);
 		TreeNode root= new TreeNode(1);
@@ -85,6 +93,8 @@ public class isSymmetricTest {
 	
 	@Test
 	//test 4
+	//this test tests the return result of a asymmetric 3 level complete binary tree.
+	//the return result should be false
 	public void completeThreeLevelAsymmetricTreeTest() {
 		ListOperations lo= new ListOperations();
 		TreeTraversal tr = new TreeTraversal();
@@ -104,6 +114,9 @@ public class isSymmetricTest {
 	
 	@Test
 	//test 5
+	//this test tests the return result of a asymmetric 3 level complete binary tree.
+	//stub is used the replace the return value of check2StringListEqual function in ListOperations
+	//the return result should be false
 	public void completeThreeLevelAsymmetricTreeTestUsingStub() {		
 		TreeTraversal tr = new TreeTraversal();//mock(TreeTraversal.class);
 		ListOperations lo=mock(ListOperations.class);
@@ -142,6 +155,8 @@ public class isSymmetricTest {
 	
 	@Test
 	//test 6
+	//this test tests the return result of a asymmetric 100 level left/right node only binary tree.
+	//the return result should be false
 	public void bigTreeTest() {
 		ListOperations lo= new ListOperations();
 		TreeTraversal tr = new TreeTraversal();
