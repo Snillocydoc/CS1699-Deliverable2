@@ -9,17 +9,21 @@ import org.junit.Test;
 public class LevelOrderTraversalTest {
 
 	@Test
-	//test 1
-	public void emptyTreeTest() {		
+	//Test 1
+	//This test ensures that when levelOrderTraversal() is called on
+	//an empty (null) tree, it returns a list of size zero.
+	public void emptyTreeTest() {
 		TreeTraversal tr = new TreeTraversal();
-		TreeNode root=null;//= new TreeNode(1);
+		TreeNode root=null;
 		
 		List<List<Integer>> result = tr.levelOrderTraversal(root);
 		assertEquals(result.size(),0);
 	}
 
 	@Test
-	//test 2
+	//Test 2
+	//This test ensure that when levelOrderTraversal() is called on a single node tree,
+	//it returns a list of size one.
 	public void onlyRootTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
@@ -31,7 +35,10 @@ public class LevelOrderTraversalTest {
 	}
 	
 	@Test
-	//test 3
+	//Test 3
+	//This test ensures that when levelOrderTraversal() is called on a complete, three level tree,
+	//three separate lists should be returned corresponding to the levels.
+	//The size of each each list should be 1,2,4.
 	public void completeThreeLevelTreeTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
@@ -72,7 +79,10 @@ public class LevelOrderTraversalTest {
 	}
 	
 	@Test
-	//test 4
+	//Test 4
+	//This test ensures that when levelOrderTraversal() is called on a linked-list type tree
+	//that is left of the root, it returns the correct number of levels.
+	//The return result size of each level should be 1,1,1,1
 	public void leftInBalanceFourLevelTreeTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
@@ -110,7 +120,10 @@ public class LevelOrderTraversalTest {
 	}
 	
 	@Test
-	//test 5
+	//Test 5
+	//This test ensures that when levelOrderTraversal() is called on a linked-list type tree
+	//that is right of the root, it returns the correct number of levels.
+	//The return result size of each level should be 1,1,1,1
 	public void rightInBalanceFourLevelTreeTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
@@ -145,5 +158,38 @@ public class LevelOrderTraversalTest {
 		List<Integer> correctLevel4 = new ArrayList<Integer>();
 		correctLevel4.add(4);
 		assertArrayEquals(result.get(3).toArray(),correctLevel4.toArray());
+	}
+	
+	@Test
+	//Test 6
+	//This tests the return result size of a 1000 level left/right node only binary tree.
+	//The return result size of each level (1000 levels) should be 1.
+	public void bigTreeTest() {
+
+		TreeTraversal tr = new TreeTraversal();
+		int treeSize=1000;
+		TreeNode r1= new TreeNode(0);
+		TreeNode root1=r1;
+		for(int i=1; i<treeSize; i++){
+			r1.left= new TreeNode(i);
+			r1=r1.left;
+		}
+		List<List<Integer>> result1=tr.levelOrderTraversal(root1);
+		assertEquals(result1.size(),treeSize);
+		for(int i=0;i<treeSize; i++){
+			assertEquals(result1.get(i).size(),1);
+		}
+		
+		TreeNode r2= new TreeNode(0);
+		TreeNode root2=r2;
+		for(int i=1; i<treeSize; i++){
+			r2.right= new TreeNode(i);
+			r2=r2.right;
+		}		
+		List<List<Integer>> result2=tr.levelOrderTraversal(root2);
+		assertEquals(result2.size(),treeSize);
+		for(int i=0;i<treeSize; i++){
+			assertEquals(result2.get(i).size(),1);
+		}
 	}
 }

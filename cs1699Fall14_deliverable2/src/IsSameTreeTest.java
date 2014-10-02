@@ -7,9 +7,11 @@ import static org.mockito.Mockito.*;
 import org.junit.Test;
 
 public class IsSameTreeTest {
-	
 	@Test
-	//test 1
+	//Test 1
+	//This test ensures that two empty (null) trees passed into the
+	//isSameTree() function are considered the same tree.
+	//The return value should be true.
 	public void emptyTreeTest() {
 		
 		TreeTraversal tr = new TreeTraversal();
@@ -21,7 +23,11 @@ public class IsSameTreeTest {
 	}
 
 	@Test
-	//test 2
+	//Test 2
+	//This test ensures that two trees containing only one node
+	//with the same value, passed into the isSameTree() function are 
+	//considered the same tree.
+	//The return value should be true.
 	public void onlyRootTest() {
 		TreeTraversal tr = new TreeTraversal();
 		TreeNode root1=new TreeNode(1);
@@ -31,7 +37,10 @@ public class IsSameTreeTest {
 	}
 
 	@Test
-	//test 3
+	//Test 3
+	//This test tests the return value of 2 identical 3-level complete binary trees
+	//passed into the isSameTree() function.
+	//The return value should be true.
 	public void completeThreeLevelTreeTest() {
 	
 		
@@ -62,7 +71,10 @@ public class IsSameTreeTest {
 		assertTrue(tr.isSameTree(root1,root2));
 	}
 	@Test
-	//test 4
+	//Test 4
+	//This test tests the return value of 2 non-identical 3-level complete binary trees
+	//passed into the isSameTree() function.
+	//The return value should be false.
 	public void completeThreeLevelTreeTestDifferent() {
 	
 		
@@ -97,3 +109,4 @@ public class IsSameTreeTest {
 
 
 }
+

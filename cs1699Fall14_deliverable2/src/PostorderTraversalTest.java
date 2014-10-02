@@ -10,6 +10,7 @@ import org.junit.Test;
 
 public class PostorderTraversalTest {
 	@Test
+	//Test 1
 	//This test ensures that when postorderTraversal is called on an empty tree (a null tree), 
 	//it returns a list of size zero.
 	public void emptyTreeTest() {		
@@ -20,6 +21,7 @@ public class PostorderTraversalTest {
 		assertEquals(result.size(),0);
 	}
 	@Test
+	//Test 2
 	//This test ensure that when postorderTraversal is called on a single node tree,
 	//it returns a list of size one.
 	public void onlyRootTest() {
@@ -32,6 +34,7 @@ public class PostorderTraversalTest {
 		
 	}
 	@Test
+	//Test 3
 	//This test checks the postorderTraversal algorithm on a seven node tree.  The test checks for the correct
 	//implementation of the following: Visit the left subtree, visit the right subtree, then visit the root
 	public void completeSevenNodeTest() {
@@ -60,6 +63,7 @@ public class PostorderTraversalTest {
 		
 	}
 	@Test
+	//Test 4
 	//This test specifically ensures that the preorderTraversal visits the left subtree,
 	//then the current node if there is no right subtree,
 	//which is an important aspect of the Pre-order Traversal algorithm
@@ -85,6 +89,7 @@ public class PostorderTraversalTest {
 		
 	}
 	@Test
+	//Test 5
 	//This test specifically ensures that the postorderTraversal 
 	//visits the right subtree if there is no left subtree
 	//then the current node,

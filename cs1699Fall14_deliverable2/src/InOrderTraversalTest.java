@@ -10,6 +10,7 @@ import org.junit.Test;
 public class InOrderTraversalTest {
 	
 	@Test
+	//Test 1
 	//This test ensures that when inorderTraversal is called on an empty tree (a null tree), 
 	//it returns a list of size zero.
 	public void emptyTreeTest() {		
@@ -20,6 +21,7 @@ public class InOrderTraversalTest {
 		assertEquals(result.size(),0);
 	}
 	@Test
+	//Test 2
 	//This test ensure that when inorderTraversal is called on a single node tree,
 	//it returns a list of size one.
 	public void onlyRootTest() {
@@ -33,6 +35,7 @@ public class InOrderTraversalTest {
 		
 	}
 	@Test
+	//Test 3
 	//This test checks the inorderTraversal algorithm on a seven node tree.  The test checks for the correct
 	//implementation of the following: Visit the left subtree, visit the root, then visit the right subtree.
 	public void completeSevenNodeTest() {
@@ -62,6 +65,7 @@ public class InOrderTraversalTest {
 		
 	}
 	@Test
+	//Test 4
 	//This test specifically ensures that the inorderTraversal visits the left subtree of every node first,
 	//which is an important aspect of the In Order Traversal algorithm
 	public void leftInBalanceFourLevelTreeTest() {
@@ -85,7 +89,8 @@ public class InOrderTraversalTest {
 		
 		
 	}
-	@Test
+	@Test 
+	//Test 5
 	//This test specifically ensures that the inorderTraversal visits the right subtree of every node last,
 	//which is also an important aspect of the In Order Traversal algorithm
 	public void rightInBalanceFourLevelTreeTest() {
@@ -105,6 +110,7 @@ public class InOrderTraversalTest {
 		//check that nodes are in order
 		List<Integer> check = new ArrayList<Integer>();
 		check.add(1);check.add(2);check.add(3);check.add(4);
+
 		assertArrayEquals(result.toArray(),check.toArray());
 		
 		
@@ -112,3 +118,6 @@ public class InOrderTraversalTest {
 	
 
 }
+
+
+

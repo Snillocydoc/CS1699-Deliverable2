@@ -15,4 +15,22 @@ public class ListOperations {
 	    
 	    return true;
 	}
+	
+	public int countLeftList(List<String> result){
+		int count=0;
+		for(int i=0;i<result.size(); i++){
+			if(!result.get(i).equals("n"))
+				count++;
+		}
+		return count;
+	}
+	
+	public int countRightList(List<String> result){
+		int count=0;
+		for(int i=0;i<result.size(); i++){
+			if(!result.get(i).equals("n"))
+				count++;
+		}
+		return count;
+	}
 }

@@ -125,6 +125,7 @@ public class TreeTraversal {
 	}
 
 	public boolean isSameTree(TreeNode p, TreeNode q) {
+		
         if(p==null && q==null)
             return true;
         if((p!=null && q==null) || (p==null && q!=null))
@@ -191,5 +192,23 @@ public class TreeTraversal {
         p.right=root.right;
         root.right=root.left;
         root.left=null;
+        
+    }
+    
+    
+    public int countNumNode(TreeNode root,ListOperations lo){
+    	if(root==null)
+    		return 0;
+    	
+    	leftResult.clear();
+    	rightResult.clear();
+
+    	rootLeftRight(root.left);
+    	rootRightLeft(root.right);
+    	
+    	int leftCount=lo.countLeftList(leftResult);
+    	int rightCount=lo.countRightList(rightResult);
+    	
+    	return 1+leftCount+rightCount;
     }
 }
